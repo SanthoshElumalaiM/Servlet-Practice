@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+    version="4.0"
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>s1</servlet-name>
+  	<servlet-class>com.Servlet1</servlet-class>
+  	<init-param>
+  		<param-name>email</param-name>
+  		<param-value>Sant@gmail.com</param-value>
+  	</init-param>
+  
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>s1</servlet-name>
+  <url-pattern>/s1</url-pattern>
+  </servlet-mapping>
+ <servlet>
+  	<servlet-name>s2</servlet-name>
+  	<servlet-class>com.Servlet2</servlet-class>
+  	<init-param>
+  		<param-name>email</param-name>
+  		<param-value>Hardik@gmail.com</param-value>
+  	</init-param>
+  
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>s2</servlet-name>
+  <url-pattern>/s2</url-pattern>
+  </servlet-mapping>
+</web-app>

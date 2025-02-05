@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+    version="4.0"
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>a</servlet-name>
+  	<servlet-class>com.StaticServlet</servlet-class>
+  	
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>a</servlet-name>
+  	<url-pattern>/static</url-pattern>
+  	 
+  </servlet-mapping>
+  <servlet>
+  <servlet-name>b</servlet-name>
+  	<servlet-class>com.DynamicServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>b</servlet-name>
+  	<url-pattern>/dynamic</url-pattern>
+  	</servlet-mapping>
+  	<servlet>
+  	<servlet-name>life</servlet-name>
+  	<servlet-class>com.LifeCycle
+  	</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+  	<servlet-name>life</servlet-name>
+  	<url-pattern>/life</url-pattern>
+  	</servlet-mapping>
+  	<servlet>
+  	<servlet-name>fetch</servlet-name>
+  	<servlet-class>com.FetchServlet
+  	</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+  	<servlet-name>fetch</servlet-name>
+  	<url-pattern>/fetch</url-pattern>
+  	</servlet-mapping>
+  	<servlet>
+  	<servlet-name>signUp</servlet-name>
+  	<servlet-class>com.SignUp
+  	</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+  	<servlet-name>signUp</servlet-name>
+  	<url-pattern>/signUp</url-pattern>
+  	</servlet-mapping>
+  	<servlet>
+  	<servlet-name>del</servlet-name>
+  	<servlet-class>com.DeleByEmail
+  	</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+  	<servlet-name>del</servlet-name>
+  	<url-pattern>/del</url-pattern>
+  	</servlet-mapping>
+</web-app>
