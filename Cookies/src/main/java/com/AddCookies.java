@@ -14,7 +14,7 @@ public class AddCookies  extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Cookie c1=new Cookie("email","Sant@gmail.com");
-		c1.setMaxAge(60*3);
+		c1.setMaxAge(60*2);
 		Cookie c2=new Cookie("pwd","123");
 		resp.addCookie(c1);
 		resp.addCookie(c2);
