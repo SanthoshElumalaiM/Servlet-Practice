@@ -13,7 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 public class DeleCookies  extends HttpServlet
 {
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
+	{
 		
 		Cookie arr[]=req.getCookies();
 		PrintWriter out=resp.getWriter();
