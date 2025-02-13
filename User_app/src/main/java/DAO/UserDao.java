@@ -69,5 +69,38 @@ public class UserDao {
 			return null;
 		}
 	}
+	public User getByEmail(String email)throws Exception
+	{
+		Class.forName(Driver);
+		c=DriverManager.getConnection(Url);
+		PreparedStatement ps=c.prepareStatement("select * from user where email=?");
+		ps.setString(1, email);
+		ResultSet rs= ps.executeQuery();
+		
+		if(rs.next())
+		{	
+			int id=rs.getInt("id");
+			String fname =rs.getString("firstName");
+			String lname =rs.getString("LastName");
+			String gender =rs.getString("gender");
+			String password=rs.getString("password");
+			Long phoneNo=rs.getLong("phoneNo");
+			
+			User u=new User();
+			u.setId(id);
+			u.setFirstName(fname);
+			u.setLastName(lname);
+			u.setGender(gender);
+			u.setEmail(email);
+		
+			u.setPassword(password);
+			u.setPhoneNo(phoneNo);
+			
+			return u;
+		}
+		else {
+			return null;
+		}
+	}
 
 }
