@@ -16,7 +16,8 @@ public class MainMethod {
 		UserDao user=new UserDao();
 		try {
 //			user.saveUser(u);
-			User u1=user.getById(1);
+//			User u1=user.getById(1);
+			User u1=user.getByEmail("sant@gmail.com");
 			System.out.println(u1);
 		} catch (Exception e) {
 			e.printStackTrace();
