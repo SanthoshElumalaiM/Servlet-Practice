@@ -35,6 +35,7 @@ public class UserDao {
 		Class.forName(Driver);
 		c=DriverManager.getConnection(Url);
 		PreparedStatement ps=c.prepareStatement("delete from user where id=?");
+		ps.setInt(1, id);
 		ps.executeUpdate();
 		c.close();
 	}
