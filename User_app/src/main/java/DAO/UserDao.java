@@ -62,6 +62,7 @@ public class UserDao {
 			u.setEmail(email);
 			u.setPassword(password);
 			u.setPhoneNo(phoneNo);
+			u.setId(id);
 			
 			return u;
 		}
@@ -130,6 +131,24 @@ public class UserDao {
 		}
 		
 		return al;
+	}
+	
+	public void update(User u)throws Exception
+	{
+		Class.forName(Driver);
+		c=DriverManager.getConnection(Url);
+		PreparedStatement ps=c.prepareStatement("update user set firstName=?,lastName=?,gender=?,email=?,password=?,phoneNo=? where id=?");
+		
+		ps.setString(1, u.getFirstName());
+		ps.setString(2, u.getLastName());
+		ps.setString(3, u.getGender());
+		ps.setString(4, u.getEmail());
+		ps.setString(5,u.getPassword());
+		ps.setLong(6,u.getPhoneNo());
+		ps.setInt(7,u.getId());
+		ps.executeUpdate();
+		c.close();
+		System.out.println("data saved");
 	}
 	
 }
