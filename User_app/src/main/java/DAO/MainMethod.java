@@ -1,5 +1,7 @@
 package DAO;
 
+import java.util.List;
+
 public class MainMethod {
 
 	public static void main(String[] args) {
@@ -17,8 +19,9 @@ public class MainMethod {
 		try {
 //			user.saveUser(u);
 //			User u1=user.getById(1);
-			User u1=user.getByEmail("sant@gmail.com");
+			List<User> u1=user.fetchAll();
 			System.out.println(u1);
+		
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
