@@ -4,9 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
-import com.mysql.cj.x.protobuf.MysqlxPrepare.Prepare;
-import com.mysql.cj.xdevapi.Result;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDao {
 	
@@ -102,5 +102,34 @@ public class UserDao {
 			return null;
 		}
 	}
-
+	public List<User> fetchAll()throws Exception
+	{
+		Class.forName(Driver);
+		c=DriverManager.getConnection(Url);
+		Statement s=c.createStatement();
+		ResultSet rs= s.executeQuery("select * from user ");
+		List<User> al=new ArrayList<User>();
+		
+		
+		
+		while(rs.next())
+		{
+			User u=new User();
+			u.setId(rs.getInt("id"));
+			u.setFirstName(rs.getString("firstName"));
+			u.setLastName(rs.getString("lastName"));
+			u.setGender(rs.getString("gender"));
+			u.setEmail(rs.getString("email"));
+			u.setPassword(rs.getString("password"));
+			u.setPhoneNo(rs.getLong("phoneNO"));
+			
+			
+			al.add(u);
+			
+			
+		}
+		
+		return al;
+	}
+	
 }
