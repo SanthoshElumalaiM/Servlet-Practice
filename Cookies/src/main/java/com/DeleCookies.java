@@ -21,7 +21,8 @@ public class DeleCookies  extends HttpServlet
 		boolean b=true;
 		for(Cookie c:arr)
 		{
-			if(c.getName().equals("pwd")) {
+			if(c.getName().equals("pwd"))
+			{
 				c.setMaxAge(0);
 				resp.addCookie(c);
 				b=false;
