@@ -17,17 +17,17 @@ public class MainMethod {
 		
 		UserDao dao=new UserDao();
 		try {
-//			dao.saveUser(u);
+			dao.saveUser(u);
 //			User u1=dao.getById(1);
 //			List<User> u1=dao.fetchAll();
 //			System.out.println(u1);
 			
-			User u2= dao.getById(1);
-			System.out.println(u2);
-			u2.setEmail("santhosh@gmail.com");
-			u2.setPhoneNo(637890);
-			System.out.println(u2);
-			dao.update(u2);
+//			User u2= dao.getById(1);
+//			System.out.println(u2);
+//			u2.setEmail("santhosh@gmail.com");
+//			u2.setPhoneNo(637890);
+//			System.out.println(u2);
+//			dao.update(u2);
 
 		} catch (Exception e) {
 			e.printStackTrace();
