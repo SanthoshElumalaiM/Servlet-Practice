@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>FecthAll</title>
 </head>
 <body>
 <% List<User> list=(List<User>)request.getAttribute("list"); %>
@@ -21,18 +21,21 @@
 		<th>PASWORD</th>
 		<th>PHONENO</th>
 	</tr>
+	<% for(User u:list)
+{%>
+	<tr>
+	<td> <%=u.getId() %></td>
+	<td> <%=u.getFirstName() %></td>
+	<td> <%=u.getLastName() %></td>
+	<td> <%=u.getGender() %></td>
+	<td> <%=u.getEmail() %></td>
+	<td> <%=u.getPassword() %></td>
+	<td> <%=u.getPhoneNo() %></td>
+	</tr>
+		
+<%} %>
+	
 </table>
 
-<% for(User u:list){ %>
-	<tr>
-		<td> <%=u.getId() %></td>
-		<td> <%=u.getFirstName() %></td>
-		<td> <%=u.getLastName() %></td>
-		<td> <%=u.getGender() %></td>
-		<td> <%=u.getEmail() %></td>
-		<td> <%=u.getPassword() %></td>
-		<td> <%=u.getPhoneNo() %></td>
-	</tr>
-<%} %>
 </body>
 </html>
