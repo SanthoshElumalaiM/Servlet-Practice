@@ -123,7 +123,7 @@ public class UserDao {
 			u.setGender(rs.getString("gender"));
 			u.setEmail(rs.getString("email"));
 			u.setPassword(rs.getString("password"));
-			u.setPhoneNo(rs.getLong("phoneNO"));
+			u.setPhoneNo(rs.getLong("phoneNo"));
 			
 			
 			al.add(u);
