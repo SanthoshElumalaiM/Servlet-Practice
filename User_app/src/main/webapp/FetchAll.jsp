@@ -21,6 +21,7 @@
 		<th>PASWORD</th>
 		<th>PHONENO</th>
 		<th>DELETE</th>
+		<th>UPDATE</th>
 	</tr>
 	<% for(User u:list)
 {%>
@@ -33,6 +34,7 @@
 	<td> <%=u.getPassword() %></td>
 	<td> <%=u.getPhoneNo() %></td>
 	<td> <a href="delete?id=<%= u.getId()%>">delete</a></td>
+	<td> <a href="update?id=<%= u.getId()%>">Update</a></td>
 	</tr>
 		
 <%} %>
