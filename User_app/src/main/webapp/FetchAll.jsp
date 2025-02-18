@@ -20,6 +20,7 @@
 		<th>EMAIL</th>
 		<th>PASWORD</th>
 		<th>PHONENO</th>
+		<th>DELETE</th>
 	</tr>
 	<% for(User u:list)
 {%>
@@ -31,6 +32,7 @@
 	<td> <%=u.getEmail() %></td>
 	<td> <%=u.getPassword() %></td>
 	<td> <%=u.getPhoneNo() %></td>
+	<td> <a href="delete?id=<%= u.getId()%>">delete</a></td>
 	</tr>
 		
 <%} %>
