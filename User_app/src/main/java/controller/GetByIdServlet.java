@@ -30,7 +30,7 @@ public class GetByIdServlet extends HttpServlet {
 			dispatcher.forward(req, resp);
 			
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 	}
 
