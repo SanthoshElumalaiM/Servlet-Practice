@@ -34,7 +34,7 @@
 	<td> <%=u.getPassword() %></td>
 	<td> <%=u.getPhoneNo() %></td>
 	<td> <a href="delete?id=<%= u.getId()%>">delete</a></td>
-	<td> <a href="update?id=<%= u.getId()%>">Update</a></td>
+	<td> <a href="get?id=<%= u.getId()%>">Update</a></td>
 	</tr>
 		
 <%} %>
