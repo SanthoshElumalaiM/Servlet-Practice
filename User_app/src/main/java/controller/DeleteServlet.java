@@ -18,7 +18,7 @@ public class DeleteServlet extends HttpServlet {
 		UserDao dao=new UserDao();
 		try {
 			dao.deleById(id);
-			RequestDispatcher dispatcher=req.getRequestDispatcher("FetchAll");
+			RequestDispatcher dispatcher=req.getRequestDispatcher("fetchAll");
 			dispatcher.forward(req, resp);
 		} catch (Exception e) {
 			e.printStackTrace();
