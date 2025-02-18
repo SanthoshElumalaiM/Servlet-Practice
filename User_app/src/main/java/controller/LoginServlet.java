@@ -28,7 +28,8 @@ public class LoginServlet extends HttpServlet{
 			{
 				if(password.equals(u.getPassword()))
 				{
-					RequestDispatcher dispatcher=req.getRequestDispatcher("Calculator.html");
+//					RequestDispatcher dispatcher=req.getRequestDispatcher("Calculator.html");
+					RequestDispatcher dispatcher=req.getRequestDispatcher("fetchAll");
 					dispatcher.forward(req, resp);
 				}
 				else {
