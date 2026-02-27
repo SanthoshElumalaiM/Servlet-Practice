@@ -16,8 +16,9 @@ public class AddAttribute extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String name="sant";
 		req.setAttribute("name",name );
+
 		
-		RequestDispatcher dispatcher=req.getRequestDispatcher("/GetAttribute");
+		RequestDispatcher dispatcher=req.getRequestDispatcher("GetAttribute");
 		dispatcher.forward(req, resp);
 		PrintWriter out =resp.getWriter();
 		out.print("<h1>Request Attribute</h1>");

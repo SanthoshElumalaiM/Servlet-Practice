@@ -19,6 +19,8 @@ public class GetAttribute extends HttpServlet {
 		PrintWriter out =resp.getWriter();
 		out.print("<h1>"+ name +"</h1>");
 		
+		out.print("<h1>Request Attribute</h1>");
+		
 	}
 
 }
