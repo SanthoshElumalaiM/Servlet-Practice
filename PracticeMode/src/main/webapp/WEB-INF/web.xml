@@ -7,14 +7,58 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
   <display-name>Archetype Created Web Application</display-name>
+  
+  
   <servlet>
   	<servlet-name>Practice</servlet-name>
   	<servlet-class>com.Practice</servlet-class>
+
   
   </servlet>
   
   <servlet-mapping>
   	<servlet-name>Practice</servlet-name>
   	<url-pattern>/Pract</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>servletConfig</servlet-name>
+  	<servlet-class>com.servletConfig</servlet-class>
+  	
+  	<init-param>
+  		<param-name>name</param-name>
+  		<param-value>Sant</param-value>
+  	</init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>servletConfig</servlet-name>
+  	<url-pattern>/servletConfig</url-pattern>
+  </servlet-mapping>
+  
+  
+  <context-param>
+  <param-name>appName</param-name>
+  <param-value>Sant</param-value>
+  </context-param>
+  
+  <servlet>
+  <servlet-name>servletContext1</servlet-name>
+  <servlet-class>servletContext.servletContext1</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>servletContext1</servlet-name>
+  <url-pattern>/servletContext1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  <servlet-name>servletContext2</servlet-name>
+  <servlet-class>servletContext.servletContext2</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>servletContext2</servlet-name>
+  <url-pattern>/servletContext2</url-pattern>
   </servlet-mapping>
 </web-app>
